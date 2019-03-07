@@ -1,0 +1,28 @@
+extends: "stylelint-config-standard"
+plugins:
+  - "stylelint-scss"
+  - "stylelint-declaration-block-no-ignored-properties"
+rules:
+  # stylelintのルールは無効にする
+  at-rule-no-unknown: null
+  # display: inlineの時widthの設定は無効のように、無意味な設定をしていないかチェックする
+  plugin/declaration-block-no-ignored-properties: true
+  # 16進数でカラーコードを指定するときは出来るだけ省略する
+  color-hex-length: "short"
+  # 良く分からない16進数のカラーコードを書いたらエラー
+  color-no-invalid-hex: true
+  # インデントは2
+  indentation: 2
+  # 0の時は単位をつけない
+  length-zero-no-unit: true
+  # ベンダープリフィクスは書かない
+  media-feature-name-no-vendor-prefix: true
+  property-no-vendor-prefix: true
+  # 0.をつけることを許可
+  number-leading-zero: "always"
+  # シングルクォートにする
+  string-quotes: "single"
+  # ,でセレクタを繋げるのをありにする
+  selector-list-comma-newline-after: "always-multi-line"
+  # カラー名は使用してもいい
+  #"color-named": "never"

@@ -1,0 +1,13 @@
+{
+  // ミニマップを非表示にする
+  "editor.minimap.enabled": false,
+
+  // eslintをvueでも適応させる
+  "eslint.validate": [
+    "javascript",
+    "vue"
+  ],
+
+  // veturのバリデーションが余計なことをしていたのでoffにする（普通のeslintでチェックする）
+  "vetur.validation.template": false
+}

@@ -1,0 +1,21 @@
+extends:
+  - "plugin:vue-libs/recommended"
+env:
+  browser: true
+  es6: true
+parser: "vue-eslint-parser"
+parserOptions:
+  parser: "babel-eslint"
+  ecmaVersion: 6
+  sourceType: "module"
+rules:
+  # varは使わせない
+  no-var: "error"
+  # セミコロンを必須とする
+  semi: ["error", "always"]  # http://eslint.org/docs/rules/semi
+  # functionの後にスペースを入れない
+  space-before-function-paren: ["error", "never"]  # http://eslint.org/docs/rules/space-before-function-paren
+  # 配列やオブジェクトの最後のアイテムに,を加える事を必須としない
+  comma-dangle: "off"
+  # v-forの時にkeyの設定を必須にしない
+  vue/require-v-for-key: "off"

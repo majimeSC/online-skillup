@@ -1,0 +1,12 @@
+node_modules/
+server/public/*
+!server/public/.gitkeep
+
+# エラー関係
+yarn.lock
+yarn-error.log
+npm-debug.log
+
+# エディタなどで生成されるファイル
+.idea/
+.DS_Store
