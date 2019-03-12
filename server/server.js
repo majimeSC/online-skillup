@@ -50,4 +50,8 @@ io.on('connection', (socket) => {
     console.log('send:', message);
     io.emit('send', message);
   });
+  socket.on('name_send', (clear) => {
+    console.log('name_send:', clear);
+    io.emit('name_send', clear);
+  });
 });
