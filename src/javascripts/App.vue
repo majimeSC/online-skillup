@@ -6,7 +6,8 @@
     </p>
     <MyComponent :message="$data.message" />
     <form @submit="onSubmit">
-      <input v-model="$data.text" type="text">
+      名前: <input v-model="$data.text" type="text"><br>
+      テキスト: <input v-model="$data.text" type="text">
       <button type="submit">送信</button>
     </form>
   </div>
