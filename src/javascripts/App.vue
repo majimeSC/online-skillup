@@ -12,6 +12,7 @@
     <p>チャットリスト</p>
     <MyComponent :clear="$data.clear" />
     <MyComponent :message="$data.message" />
+    <ul id='message_list'></ul>
   </div>
 </template>
 
@@ -40,6 +41,10 @@ export default {
     socket.on('name_send', (clear) => {
       console.log(clear);
       this.$data.clear = clear;
+      const element = document.createElement('li');
+      element.setAttribute('id', 'chat_list');
+      element.innerHTML = String(clear);
+      document.getElementById('message_list').appendChild(element);
     });
     socket.on('send', (message) => {
       console.log(message);
