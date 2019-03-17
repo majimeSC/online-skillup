@@ -10,13 +10,11 @@
       <button type="submit">送信</button>
     </form>
     <p>チャットリスト</p>
-    <ul class="text_list_frame">
-      <li v-for="item in items">{{ item.childName }} - {{ item.childText }} - {{ item.time }}</li>
-    </ul>
-    <div class="chat_win">
+    <div class="chat_win" v-for="item in items">
       <!-- チャットウィンドウの構成-->
-      <div class="chat_name">name</div>
-      <div class="chat_text">text</div>
+      <div class="chat_name">NN: {{ item.childName }}</div>
+      <div class="chat_time">{{ item.time }}</div>
+      <div class="chat_text">Message:<br>{{ item.childText }}</div>
     </div>
     <div class="botui-app-container" id="chat-app">
       <!-- チャットボットの表示-->
@@ -88,20 +86,36 @@ ul {
 }
 
 .chat_win {
-  float: left;
+  float: none;
   background-color: brown;
-  width: 300px;
-  height: 150px;
+  width: 600px;
+  height: 105px;
+  padding: 10px;
+  border: 10px solid white;
 }
 
 .chat_name {
   background-color: beige;
-  width: 70px;
+  width: 250px;
+  height: 15px;
+  float: left;
+  padding: 5px 25px 5px 25px;
+}
+
+.chat_time {
+  background-color: cadetblue;
+  width: 250px;
+  height: 15px;
+  float: right;
+  padding: 5px 25px 5px 25px;
 }
 
 .chat_text {
   background-color: bisque;
-  width: 250px;
+  width: 550px;
   height: 70px;
+  float: left;
+  padding: 5px 25px 5px 25px;
 }
+
 </style>
